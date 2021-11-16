@@ -14,7 +14,6 @@ LINE Bot に対して FlexMessage を送る(ローカル版)
 git clone https://github.com/ymd65536/line_flex_message_local.git
 cd line_flex_message_local
 pip install line-bot-sdk -t .
-python main.py
 ```
 
 環境変数を設定する。
@@ -26,3 +25,9 @@ LINE_CHANNEL_ACCESS_TOKEN=YOUR_LINE_CHANNEL_ACCESS_TOKEN
 
 `YOUR_LINE_USER_ID` には LINE MessagingAPI から取得できる「あなたのユーザ ID」  
 `YOUR_LINE_CHANNEL_ACCESS_TOKEN` には LINE MessagingAPI から取得できる「チャネルアクセストークン」
+
+## 実行
+
+```bash
+python main.py
+```
