@@ -16,3 +16,13 @@ cd line_flex_message_local
 pip install line-bot-sdk -t .
 python main.py
 ```
+
+環境変数を設定する。
+
+```.env
+LINE_USER_ID=YOUR_LINE_USER_ID
+LINE_CHANNEL_ACCESS_TOKEN=YOUR_LINE_CHANNEL_ACCESS_TOKEN
+```
+
+`YOUR_LINE_USER_ID` には LINE MessagingAPI から取得できる「あなたのユーザ ID」  
+`YOUR_LINE_CHANNEL_ACCESS_TOKEN` には LINE MessagingAPI から取得できる「チャネルアクセストークン」
