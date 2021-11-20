@@ -3,19 +3,7 @@ from linebot import LineBotApi
 from linebot.models import  FlexSendMessage
 import json
 import os
-
-# FlexMessageを送信するスクリプト
-
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
-line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
-
-LINE_USER_ID = os.getenv('LINE_USER_ID', None)
-
 print('Send Flex Message')
-
-# f文字列だと{}が意味をもってしまうので利用できない
-# formatでも同じ
-# bubble コンテナを作ってもいいけどそれだとシュミレータのjsonがそのまま使えない
 
 flex_message = """
 {
@@ -162,6 +150,10 @@ flex_message_obj = FlexSendMessage(
     # contentsパラメタに, dict型の値を渡す
     contents=flex_message_json_dict
 )
+
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+LINE_USER_ID = os.getenv('LINE_USER_ID', None)
 
 # 送信するFlexMessage を作成
 line_bot_api.push_message(LINE_USER_ID,flex_message_obj)
