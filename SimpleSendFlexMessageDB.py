@@ -36,7 +36,7 @@ flex_message = flex_message = """
         "contents": [
           {
             "type": "span",
-            "text": "サンプル問題",
+            "text": "ELBをパブリックサブネットに配置しその後ろにEC2を配置することで、EC2インスタンス上に構成したWebサービスをインターネット上に公開しています。EC2の配置先として適切なサブネットのタイプはどれでしょうか？  ",
             "size": "md"
           }
         ],
@@ -48,7 +48,7 @@ flex_message = flex_message = """
         "contents": [
           {
             "type": "span",
-            "text": "1.answer",
+            "text": "1.パブリックサブネット",
             "size": "md"
           }
         ],
@@ -61,7 +61,7 @@ flex_message = flex_message = """
         "contents": [
           {
             "type": "span",
-            "text": "2.answer",
+            "text": "2.プライベートサブネット",
             "size": "md"
           }
         ],
@@ -74,7 +74,7 @@ flex_message = flex_message = """
         "contents": [
           {
             "type": "span",
-            "text": "3.answer",
+            "text": "3.VPCエンドポイントが設定されたプライベートサブネット",
             "size": "md"
           }
         ],
@@ -88,7 +88,7 @@ flex_message = flex_message = """
         "contents": [
           {
             "type": "span",
-            "text": "4.answer",
+            "text": "4.オンプレとの専用線接続が設定されたプライベートサブネット",
             "size": "md"
           }
         ],
@@ -105,33 +105,37 @@ flex_message = flex_message = """
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<1>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "1",
+          "displayText": "1"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<2>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "2",
+          "displayText": "2"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<3>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "3",
+          "displayText": "3"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<4>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "4",
+          "displayText": "4"
         }
       }
     ],

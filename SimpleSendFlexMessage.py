@@ -103,33 +103,37 @@ flex_message = """
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<1>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "1",
+          "displayText": "1"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<2>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "2",
+          "displayText": "2"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<3>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "3",
+          "displayText": "3"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "uri",
-          "label": "<4>",
-          "uri": "http://linecorp.com/"
+          "type": "postback",
+          "label": "action",
+          "data": "4",
+          "displayText": "4"
         }
       }
     ],
