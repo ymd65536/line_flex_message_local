@@ -159,20 +159,26 @@ hero_contents_text = '問題文'
 flex_message_json_dict['header']['contents'][0]['text'] = header_contents_text
 flex_message_json_dict['hero']['contents'][0]['contents'][0]['text'] = hero_contents_text
 
+answer = []
+flex_message_json_dict['hero']['contents'][0]['contents'][1]['text'] = answer[0]
+flex_message_json_dict['hero']['contents'][0]['contents'][2]['text'] = answer[1]
+flex_message_json_dict['hero']['contents'][0]['contents'][3]['text'] = answer[2]
+flex_message_json_dict['hero']['contents'][0]['contents'][4]['text'] = answer[3]
+
 # 回答欄を作成
-body_contents_dic ={}
-body_contents_dic['action']=[
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"}
-]
+#body_contents_dic ={}
+#body_contents_dic['action']=[
+#  {"label":"test","uri":"https://example.com"},
+#  {"label":"test","uri":"https://example.com"},
+#  {"label":"test","uri":"https://example.com"},
+#  {"label":"test","uri":"https://example.com"}
+#]
 
 # 回答欄のBodyを作成
-contents = flex_message_json_dict['body']['contents']
-for cnt_i in range(len(contents)):
-  contents[cnt_i]['action']['label'] = body_contents_dic['action'][cnt_i]['label']
-  contents[cnt_i]['action']['uri'] = body_contents_dic['action'][cnt_i]['uri']
+#contents = flex_message_json_dict['body']['contents']
+#for cnt_i in range(len(contents)):
+#  contents[cnt_i]['action']['label'] = body_contents_dic['action'][cnt_i]['label']
+#  contents[cnt_i]['action']['uri'] = body_contents_dic['action'][cnt_i]['uri']
 
 
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN', None)
