@@ -1,0 +1,15 @@
+{
+  "q_id":1,
+  "header":{
+    "title":"タイトル"
+  },
+  "hero":{
+    "question":"ELBをパブリックサブネットに配置しその後ろにEC2を配置することで、EC2インスタンス上に構成したWebサービスをインターネット上に公開しています。EC2の配置先として適切なサブネットのタイプはどれでしょうか？  "
+  },
+  "action":[
+      {"label":"test","uri":"https://example.com"},
+      {"label":"test","uri":"https://example.com"},
+      {"label":"test","uri":"https://example.com"},
+      {"label":"test","uri":"https://example.com"}
+    ]
+}
