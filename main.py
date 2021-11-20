@@ -40,13 +40,13 @@ flex_message = """
     "contents": [
       {
         "type": "text",
-        "text": "test",
+        "text": "question",
         "wrap": true,
         "align": "center",
         "contents": [
           {
             "type": "span",
-            "text": "問題文",
+            "text": "ELBをパブリックサブネットに配置しその後ろにEC2を配置することで、EC2インスタンス上に構成したWebサービスをインターネット上に公開しています。EC2の配置先として適切なサブネットのタイプはどれでしょうか？  ",
             "size": "md"
           }
         ],
@@ -54,11 +54,11 @@ flex_message = """
       },
       {
         "type": "text",
-        "text": "answer1",
+        "text": "1",
         "contents": [
           {
             "type": "span",
-            "text": "1",
+            "text": "1.パブリックサブネット",
             "size": "md"
           }
         ],
@@ -67,11 +67,11 @@ flex_message = """
       },
       {
         "type": "text",
-        "text": "answer2",
+        "text": "2",
         "contents": [
           {
             "type": "span",
-            "text": "2",
+            "text": "2.プライベートサブネット",
             "size": "md"
           }
         ],
@@ -80,11 +80,11 @@ flex_message = """
       },
       {
         "type": "text",
-        "text": "answer3",
+        "text": "3",
         "contents": [
           {
             "type": "span",
-            "text": "2",
+            "text": "3.VPCエンドポイントが設定されたプライベートサブネット",
             "size": "md"
           }
         ],
@@ -94,11 +94,11 @@ flex_message = """
       },
       {
         "type": "text",
-        "text": "3",
+        "text": "4",
         "contents": [
           {
             "type": "span",
-            "text": "4",
+            "text": "4.オンプレとの専用線接続が設定されたプライベートサブネット",
             "size": "md"
           }
         ],
@@ -155,29 +155,7 @@ flex_message = """
 }
 """
 
-header_contents_text = 'タイトル'
-hero_contents_text = '問題文'
-
 flex_message_json_dict = json.loads(flex_message)
-
-# ヘッダと問題を作成
-flex_message_json_dict['header']['contents'][0]['text'] = header_contents_text
-flex_message_json_dict['hero']['contents'][0]['contents'][0]['text'] = hero_contents_text
-
-# 回答欄を作成
-body_contents_dic ={}
-body_contents_dic['action']=[
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"},
-  {"label":"test","uri":"https://example.com"}
-]
-
-# 回答欄のBodyを作成
-contents = flex_message_json_dict['body']['contents']
-for cnt_i in range(len(contents)):
-  contents[cnt_i]['action']['label'] = body_contents_dic['action'][cnt_i]['label']
-  contents[cnt_i]['action']['uri'] = body_contents_dic['action'][cnt_i]['uri']
 
 flex_message_obj = FlexSendMessage(
     alt_text='alt_text',
@@ -186,4 +164,4 @@ flex_message_obj = FlexSendMessage(
 )
 
 # 送信するFlexMessage を作成
-# line_bot_api.push_message(LINE_USER_ID,flex_message_obj)
+line_bot_api.push_message(LINE_USER_ID,flex_message_obj)
