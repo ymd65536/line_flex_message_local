@@ -18,7 +18,7 @@ def get_dynamo_table(key_id, access_key, table_name):
     return dynamo_table
  
 def insert_data_from_json(table, input_file_name):
-    with open(input_file_name, "r") as f:
+    with open(input_file_name, "r",encoding="utf-8") as f:
         json_data = json.load(f)
         with table.batch_writer() as batch:
             for record in json_data:
@@ -30,5 +30,5 @@ if __name__ == '__main__':
     dynamo_table = get_dynamo_table(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, table_name)
 
     # 問題文データをインポート
-    input_file_name = './' 
+    input_file_name = './json/question_1.json' 
     insert_data_from_json(dynamo_table, input_file_name)
