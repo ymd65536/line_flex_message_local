@@ -1,15 +1,18 @@
-{
+[
+  {
   "q_id":1,
+  "sort_key":1,
   "header":{
-    "title":"タイトル"
+    "title":"サブネットに関する問題"
   },
   "hero":{
     "question":"ELBをパブリックサブネットに配置しその後ろにEC2を配置することで、EC2インスタンス上に構成したWebサービスをインターネット上に公開しています。EC2の配置先として適切なサブネットのタイプはどれでしょうか？  "
   },
-  "action":[
-      {"label":"test","uri":"https://example.com"},
-      {"label":"test","uri":"https://example.com"},
-      {"label":"test","uri":"https://example.com"},
-      {"label":"test","uri":"https://example.com"}
+  "answers":[
+      {"answer":"1.パブリックサブネット"},
+      {"answer":"2.プライベートサブネット"},
+      {"answer":"3.VPCエンドポイントが設定されたプライベートサブネット"},
+      {"answer":"4.オンプレとの専用線接続が設定されたプライベートサブネット"}
     ]
-}
+  }
+]
