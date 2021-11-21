@@ -4,7 +4,7 @@
         {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
-            "Action": "dynamodb:PutItem",
+            "Action": "dynamodb:BatchWriteItem",
             "Resource": "*"
         }
     ]
