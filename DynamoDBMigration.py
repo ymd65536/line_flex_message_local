@@ -5,7 +5,7 @@ import os
 # AWSへのアクセス情報
 AWS_ACCESS_KEY_ID=os.getenv('AWS_ACCESS_KEY_ID',None)
 AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY',None)
-table_name = 'AwsQuiz'
+table_name = 'AwsQuizBot'
 
 def get_dynamo_table(key_id, access_key, table_name):
     session = Session(
