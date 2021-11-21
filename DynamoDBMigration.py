@@ -2,6 +2,7 @@ from boto3.session import Session
 import json
 import os
 
+# AWSへのアクセス情報
 AWS_ACCESS_KEY_ID=os.getenv('AWS_ACCESS_KEY_ID',None)
 AWS_SECRET_ACCESS_KEY=os.getenv('AWS_SECRET_ACCESS_KEY',None)
 table_name = 'AwsQuiz'
